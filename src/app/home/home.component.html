@@ -1,0 +1,10 @@
+<ngx-spinner></ngx-spinner>
+<simple-notifications></simple-notifications>
+<input (keyup.enter)="createpost(title)" #title class="form-control">
+<ul class="list-group mt-3">
+    <li *ngFor="let user of posts" class="list-group-item" aria-placeholder="Enter data to post">
+        <mdb-icon fas icon="edit" class="edit" (click)="updatePost(user)"></mdb-icon>
+        <mdb-icon fas icon="trash-alt" class="delete" (click)="deletePost(user)"></mdb-icon>
+        {{user.title}}
+    </li>
+</ul>
